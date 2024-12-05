@@ -10,6 +10,17 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Media</title>
+    <script>
+        // Materialbox init
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems);
+
+        // Slider init
+        var sliderElems = document.querySelectorAll('.slider');
+        var sliderInstances = M.Slider.init(sliderElems);
+        });
+</script>
 </head>
 <body>
     <h1 class="red-text text-lighten-2 center">Media CSS</h1>
@@ -34,25 +45,73 @@
 
     <img class="circle" src="steam.jpg"
     <br>
-    <h2 class="red-text text-lighten-2">Videos</h2> 
-    <p> We provide a container for Embedded Videos that resizes them responsively.</p>
-
-    <h3>Responsive Embeds</h3>
-    <p>To make your embeds responsive, merely wrap them with a containing div which has the class video-container</p>
-    <br>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1T22wNvoNiU?si=rNb2_wirGzrn3kjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-
-    </div>
-    <br>
-    <h3>Responsive Videos</h3>
-    <p>To make your HTML5 Videos responsive just add the class responsive-video to the video tag.</p>
-    <br>
-    <video class="responsive-video" autoplay="false" controls loop="true" preload="metadata" src="bg3 combat.mp4"
-    </div>
-
 </div>
+<div class="container">
+    <h3>Material Box</h3> 
+    <p>Material box is a material design implementation of the Lightbox plugin. When a user clicks on an image that can be enlarged, Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss the image, the user can either click on the image again, scroll away, or press the ESC key.</p>
+    <div class="material-placeholder" style>
+        <img class="materialboxed responsive-img" width="650" src="05winlink.jpg" data-caption="Default Wallpaper for Windows Link">
+    </div>
+       <p>Creating the above image with the effect is as simple as adding a materialboxed class to the image tag.</p>
+        <h3>Captions</h3> 
+        <p>It is very easy to add a short caption to your photo. Just add the caption as a data-caption attribute/p>  
+        <h3>Slider</h3> 
+            <p>Our slider is a simple and elegant image carousel. You can also have captions that will be transitioned on their own depending on their alignment. You can also have indicators that show up on the bottom of the slider.</p>
+            
+            <div class="slider">
+                <ul class="slides">
+                  <li>
+                    <img src="01winxp.jpg">
+                    <div class="caption left-align" alt="Windows XP">
+                      <h2>The evolution of default Windows wallpapers</h2>
+                      <h5 class="light grey-text text-lighten-3">Starting with the world's most famous.</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="02win7.jpg">
+                    <div class="caption left-align" alt="Windows 7">
+                      <h3>The evolution of default Windows wallpapers</h3>
+                      <h5 class="light grey-text text-lighten-3">Then to the worthy successor.</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="03win10.jpg"> 
+                    <div class="caption center-align alt="Windows 10">
+                      <h3>The evolution of default Windows wallpapers</h3>
+                      <h5 class="light grey-text text-lighten-3">Then to the unexpected heir.</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="04win11.jpg">
+                    <div class="caption right-align">
+                      <h3>The evolution of default Windows wallpapers</h3>
+                      <h5 class="light grey-text text-lighten-3">Now the one with strict entry requirements</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            <h2 class="red-text text-lighten-2">Videos</h2> 
+        <p> We provide a container for Embedded Videos that resizes them responsively.</p>
     
+        <h3>Responsive Embeds</h3>
+        <p>To make your embeds responsive, merely wrap them with a containing div which has the class video-container</p>
+        <br>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1T22wNvoNiU?si=rNb2_wirGzrn3kjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    
+        </div>
+        <br>
+        <h3>Responsive Videos</h3>
+        <p>To make your HTML5 Videos responsive just add the class responsive-video to the video tag.</p>
+        <br>
+        <video class="responsive-video" controls loop="true" preload="metadata" src="bg3 combat.mp4"
+        
+    
+    
+        
+
+
+
 
 </body>
 </html>
